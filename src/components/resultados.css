@@ -1,5 +1,5 @@
 .resultados {
-    max-width: 50%;
+    width: 80%;
     margin: auto;
     margin-top: 20px;
     padding: 10px;
@@ -9,6 +9,7 @@
 }
 
 table {
+    max-width: 80%;
     margin: auto;
     
 }
@@ -26,6 +27,6 @@ th {
 
 @media (max-width: 768px) {
   .resultados {
-    width: 100%;  /* ocupar todo el ancho */
+    width: 80%;  /* ocupar todo el ancho */
   }
 }
