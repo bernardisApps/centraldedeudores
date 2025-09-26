@@ -23,3 +23,10 @@ td {
 th {
     background-color: #f2f2f2;
 }
+
+@media (max-width: 768px) {
+  .resultados {
+    width: 100%;  /* ocupar todo el ancho */
+    height: 100vh; /* ocupar todo el alto de la pantalla */
+  }
+}
