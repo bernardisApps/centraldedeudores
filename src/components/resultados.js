@@ -2,7 +2,7 @@ import './resultados.css';
 
 const Resultados = ({ response }) => {
     let HtmlResponse = null;
-    const fechaFormateada = "";
+    let fechaFormateada = "";
     if (response) {
         const fecha = response.results.periodos[0].periodo; // puede venir como string o número
         const anio = fecha.slice(0, 4);   // "2025"
