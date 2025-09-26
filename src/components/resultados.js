@@ -3,14 +3,13 @@ import './resultados.css';
 const Resultados = ({ response }) => {
     let HtmlResponse = null;
     let fechaFormateada = "";
-    if (response) {
+
+    if (response.status === 200) {
         const fecha = response.results.periodos[0].periodo; // puede venir como string o número
         const anio = fecha.slice(0, 4);   // "2025"
         const mes = fecha.slice(4, 6);    // "08"
         fechaFormateada = `${mes}/${anio}`; // "08/2025"
-    }
 
-    if (response && response.status === 200) {
         HtmlResponse = <div className="resultados">
             <p><strong>Nombre: </strong>{response.results.denominacion}</p>
             <p><strong>Cuil: </strong>{response.results.identificacion}</p>
@@ -39,7 +38,7 @@ const Resultados = ({ response }) => {
             </table>
 
         </div>
-    } else if (response) {
+    } else{
         HtmlResponse = <div className='resultados'>
             <p>No se encontraron datos</p>
         </div>
