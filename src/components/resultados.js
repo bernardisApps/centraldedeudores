@@ -9,6 +9,7 @@ const Resultados = ({ response }) => {
         const anio = fecha.slice(0, 4);   // "2025"
         const mes = fecha.slice(4, 6);    // "08"
         fechaFormateada = `${mes}/${anio}`; // "08/2025"
+        const sit = ["normal", "con deuda", "en mora"];
 
         HtmlResponse = <div className="resultados">
             <p><strong>Nombre: </strong>{response.results.denominacion}</p>
@@ -28,8 +29,8 @@ const Resultados = ({ response }) => {
                     {response.results.periodos[0].entidades.map((entidad, index) => {
                         return (<tr>
                             <td key={index}>{entidad.entidad}</td>
-                            <td key={index + 1}>{entidad.situacion}</td>
-                            <td key={index + 2}>{entidad.monto}</td>
+                            <td style={{"color": entidad.situacion === 3 ? "red" : "black"}}  key={index + 1}>{sit[entidad.situacion-1]}</td>
+                            <td key={index + 2}>{"$"+entidad.monto*1000}</td>
                         </tr>
                         )
                     })}

@@ -1,14 +1,14 @@
-.buscador{
-    padding: 20px;
+.buscador {
+    width: 80%;
     margin: auto;
-    text-align: center;
-    max-width: 50%;
+    margin-top: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 20px;
     background-color: #f2f2f2;
 }
 
-.btnBuscar{
+.btnBuscar {
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -18,4 +18,19 @@
     border: none;
     border-radius: 10px;
     box-shadow: 2px 2px 2px grey;
+}
+
+@media (max-width: 768px) {
+  .buscador {
+    width: 80%;  /* ocupar todo el ancho */
+  }
+}
+
+.input-text {
+    width: 60%;
+    height: 2em;
+    font-size: 1em;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }

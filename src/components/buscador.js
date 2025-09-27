@@ -20,7 +20,7 @@ const Buscador = ({ response, setResponse }) => {
 
     const HtmlBuscador = <div className='buscador'>
         <h3>Ingrese su cuil para acceder a sus datos:</h3>
-        <input onChange={(ev)=>{setTextCuil(ev.target.value)}} type='number' placeholder='Ingrese su cuil'></input><br /><br />
+        <input className='input-text' onChange={(ev)=>{setTextCuil(ev.target.value)}} type='number' placeholder='Ingrese su cuil'></input><br /><br />
         <button onClick={onClick} className='btnBuscar'>Buscar</button>
     </div>
 
