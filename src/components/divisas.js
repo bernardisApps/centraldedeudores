@@ -28,7 +28,7 @@ const Divisas = () => {
         HtmlResponse = <div className='resultados'>
             
                 {div.results.detalle.filter(item => item.codigoMoneda === "USD" ||  item.codigoMoneda === "EUR"||  item.codigoMoneda === "JPY").map((item, index) => {
-                    return <p style={{display:'inline'}} >{item.codigoMoneda} - ${item.tipoCotizacion}  |  </p>
+                    return <p style={{display:'inline'}} >{item.codigoMoneda} - 💲{item.tipoCotizacion}  |  </p>
                 })}
             
         </div>
