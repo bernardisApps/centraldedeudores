@@ -19,3 +19,16 @@ h1 {
     font-size:medium;
   }
 }
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+  height: fit-content;
+}
+
+footer a{
+  color: #61dafb;
+  text-decoration: none;
+}
