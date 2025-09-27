@@ -29,8 +29,8 @@ const Resultados = ({ response }) => {
                     {response.results.periodos[0].entidades.map((entidad, index) => {
                         return (<tr>
                             <td key={index}>{entidad.entidad}</td>
-                            <td style={{"color": entidad.situacion === 3 ? "red" : "black"}}  key={index + 1}>{sit[entidad.situacion-1]}</td>
-                            <td key={index + 2}>{"$"+entidad.monto*1000}</td>
+                            <td style={{ "color": entidad.situacion === 3 ? "red" : "black" }} key={index + 1}>{sit[entidad.situacion - 1]}</td>
+                            <td key={index + 2}>{"$" + entidad.monto * 1000}</td>
                         </tr>
                         )
                     })}
@@ -39,9 +39,13 @@ const Resultados = ({ response }) => {
             </table>
 
         </div>
-    } else{
+    } else if (response && response.status === 400) {
         HtmlResponse = <div className='resultados'>
-            <p>No se encontraron datos</p>
+            <p> {response.errorMessages[0]} </p>
+        </div>
+    } else if (response && response.status === 404) {
+        HtmlResponse = <div className='resultados'>
+            <p> {response.errorMessages[0]} </p>
         </div>
     }
 
