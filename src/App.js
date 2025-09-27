@@ -3,6 +3,7 @@ import './App.css';
 import Buscador from './components/buscador';
 import Resultados from './components/resultados';
 import logo from './img/centraldedeudores.png';
+import Divisas from './components/divisas';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <h1>🇦🇷Bienvenidos a Central de Deudores del BCRA🇦🇷</h1>
+      <Divisas />
       <Buscador response={response} setResponse={setResponse} />
       <Resultados response={response} />
       <footer>
