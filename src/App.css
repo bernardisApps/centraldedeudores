@@ -3,7 +3,7 @@
 }
 
 h1 {
-  background-color: #282c34;
+  background-color: #001a4e;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ h1 {
 footer {
   margin-top: 20px;
   padding: 10px;
-  background-color: #282c34;
+  background-color: #001a4e;
   color: white;
   height: fit-content;
 }
@@ -31,4 +31,10 @@ footer {
 footer a{
   color: #61dafb;
   text-decoration: none;
+}
+
+.logo {
+  display: block;
+  height: 200px;
+  margin: auto;
 }
