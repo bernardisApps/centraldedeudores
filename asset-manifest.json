@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.b15f7643.css",
-    "main.js": "./static/js/main.32ddb385.js",
+    "main.js": "./static/js/main.b055c4e8.js",
     "static/media/centraldedeudores.png": "./static/media/centraldedeudores.ff5b6c983b34df475955.png",
     "index.html": "./index.html",
     "main.b15f7643.css.map": "./static/css/main.b15f7643.css.map",
-    "main.32ddb385.js.map": "./static/js/main.32ddb385.js.map"
+    "main.b055c4e8.js.map": "./static/js/main.b055c4e8.js.map"
   },
   "entrypoints": [
     "static/css/main.b15f7643.css",
-    "static/js/main.32ddb385.js"
+    "static/js/main.b055c4e8.js"
   ]
 }
