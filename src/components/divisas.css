@@ -1,0 +1,12 @@
+.divisa{
+    color: white;
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.divisasContainer{
+    text-align: center;
+    background-color: black;
+}

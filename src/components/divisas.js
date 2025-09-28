@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
+import './divisas.css';
+
 const Divisas = () => {
+
     const [div, setDiv] = useState([]);
+
     useEffect(() => {
         try {
 
@@ -25,12 +29,14 @@ const Divisas = () => {
             <p> {div.errorMessages[0]} </p>
         </div>
     } else if (div.status === 200) {
-        HtmlResponse = <div className='resultados'>
-            
-                {div.results.detalle.filter(item => item.codigoMoneda === "USD" ||  item.codigoMoneda === "EUR"||  item.codigoMoneda === "JPY").map((item, index) => {
-                    return <p style={{display:'inline'}} >{item.codigoMoneda} - 💲{item.tipoCotizacion}  |  </p>
-                })}
-            
+        HtmlResponse = <div className='divisasContainer'>
+
+            {div.results.detalle.filter(item => item.codigoMoneda === "USD" || item.codigoMoneda === "EUR" || item.codigoMoneda === "JPY").map((item, index) => {
+                return <div className='divisa'>
+                    {item.codigoMoneda} =💲{item.tipoCotizacion}
+                </div>
+            })}
+
         </div>
     }
     return (
