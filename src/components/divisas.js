@@ -31,7 +31,7 @@ const Divisas = () => {
     } else if (div.status === 200) {
         HtmlResponse = <div className='divisasContainer'>
 
-            {div.results.detalle.filter(item => item.codigoMoneda === "USD" || item.codigoMoneda === "EUR" || item.codigoMoneda === "JPY").map((item, index) => {
+            {div.results.detalle.filter(item => item.codigoMoneda === "USD" || item.codigoMoneda === "EUR").map((item, index) => {
                 return <div className='divisa'>
                     {item.codigoMoneda} =💲{item.tipoCotizacion}
                 </div>
